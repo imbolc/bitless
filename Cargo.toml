@@ -1,0 +1,18 @@
+[package]
+description = "A bit less code to carry with almost any program"
+edition = "2021"
+license = "MIT"
+name = "bitless"
+repository = "https://github.com/imbolc/bitless"
+version = "0.1.0"
+
+[dependencies]
+displaydoc = "0.2"
+thiserror = "1"
+tracing = "0.1"
+tracing-journald = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+
+[dev-dependencies]
+rusty-hook = "0.11"
