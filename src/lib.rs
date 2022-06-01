@@ -2,4 +2,5 @@
 
 #![warn(clippy::all, missing_docs, nonstandard_style, future_incompatible)]
 
-pub mod journaling;
+pub mod error;
+pub mod journal;
