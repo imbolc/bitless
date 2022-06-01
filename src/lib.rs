@@ -1,4 +1,4 @@
-//! Bits of code I use in almost any program
+//! A bit less code to carry with almost any program
 
 #![warn(clippy::all, missing_docs, nonstandard_style, future_incompatible)]
 

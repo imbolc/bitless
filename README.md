@@ -39,7 +39,7 @@
 
 # bitless
 
-Bits of code I use in almost any program
+A bit less code to carry with almost any program
 
 ## Contributing
 
