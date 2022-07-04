@@ -4,13 +4,13 @@ edition = "2021"
 license = "MIT"
 name = "bitless"
 repository = "https://github.com/imbolc/bitless"
-version = "0.1.0"
+version = "0.1.1"
 
 [dependencies]
 displaydoc = "0.2"
 thiserror = "1"
 tracing = "0.1"
-tracing-journald = "0.2"
+tracing-journald = "0.3"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 
