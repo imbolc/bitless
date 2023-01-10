@@ -6,10 +6,10 @@ use tracing::error;
 
 #[derive(Debug, Display, Error)]
 enum Error {
-    /// cannot initialize logging
+    /// can't initialize logging
     LogInit(#[from] bitless::journal::Error),
-    /// cannot open file: {1}
-    OpenFile(#[source] std::io::Error, &'static str),
+    /// can't open file `{2}` in `{1}`
+    OpenFile(#[source] std::io::Error, &'static str, &'static str),
 }
 
 type Result<T> = std::result::Result<T, Error>;
@@ -31,7 +31,7 @@ fn main() -> Result<()> {
 
 fn run() -> Result<()> {
     let path = "not-found.txt";
-    std::fs::File::open(path).map_err(|e| Error::OpenFile(e, path))?;
+    std::fs::File::open(path).map_err(|e| Error::OpenFile(e, bitless::code_path!(), path))?;
     Ok(())
 }
 
