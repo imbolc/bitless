@@ -1,7 +1,10 @@
 //! Error handling
 
-/// A helper to format error with its source chain
-pub fn chain(e: &impl std::error::Error) -> String {
+/// A helper function to format an error with its source chain.
+///
+/// This function works with both `&Error` and `Box<dyn Error>`. When passing a boxed error,
+/// make sure to dereference it using `&*e`.
+pub fn chain(e: &(dyn std::error::Error + 'static)) -> String {
     use std::fmt::Write as _;
 
     let mut s = e.to_string();
